@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Ora2Pg - Database Migration Report</title>
+  <meta HTTP-EQUIV="Generator" CONTENT="Ora2Pg v19.0">
+  <meta HTTP-EQUIV="Date" CONTENT="Mon Jan 14 10:38:35 2019">
+  <style>
+body {
+	margin: 30px 0;
+	padding: 0;
+	background: #EFEFEF;
+	font-size: 12px;
+	color: #1e1e1e;
+}
+
+h1 {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #DFDFDF;
+	font-size: 22px;
+	padding: 0px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	color: #0094C7;
+}
+
+h2 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	padding: 0px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	color: #0094C7;
+}
+
+#header table {
+	padding: 0 5px 0 5px;
+	border: 1px solid #DBDBDB;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+#header th {
+	padding: 0 5px 0 5px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #EC5800;
+}
+
+#content table {
+	padding: 0 5px 0 5px;
+	border: 1px solid #DBDBDB;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#content td {
+	padding: 0 5px 0 5px;
+	border-bottom: 1px solid #888888;
+	margin-bottom: 20px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#content th {
+	border-bottom: 1px solid #BBBBBB;
+	padding: 0 5px 0 5px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #EC5800;
+}
+
+.object_name {
+        font-weight: bold;
+        color: #0094C7;
+	text-align: left;
+	white-space: pre;
+}
+
+.detail {
+	white-space: pre;
+}
+
+#footer {
+	margin-right: 10px;
+	text-align: right;
+}
+
+#footer a {
+	color: #EC5800;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+  </style>
+</head>
+<body>
+<div id="header">
+<h1>Ora2Pg - Database Migration Report</h1>
+<table>
+<tr><th>Version</th><td>Microsoft SQL Server 2017 (RTM-CU9-GDR) (KB4293805) - 14.0.3035.2 (X64) </td></tr>
+<tr><th>Schema</th><td></td></tr>
+<tr><th>Size</th><td>336.00 MB</td></tr>
+</table>
+</div>
+<div id="content">
+<table>
+<tr><th>Object</th><th>Number</th><th>Invalid</th><th>Estimated cost</th><th>Comments</th><th>Details</th></tr>
+<tr><td class="object_name">DATABASE LINK</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">3</td><td>Database links will be exported as SQL/MED PostgreSQL's Foreign Data Wrapper (FDW) extensions using tds_fdw.</td><td class="detail"></td></tr>
+<tr><td class="object_name">FUNCTION</td><td style="text-align: center;">11</td><td style="text-align: center;">0</td><td style="text-align: center;">61</td><td>Total size of function code: 4609 bytes.</td><td class="detail">ufngetstock: 5<br>ufngetpurchaseorderstatustext: 3<br>ufngetproductlistprice: 5<br>ufngetaccountingenddate: 7<br>ufngetproductdealerprice: 5<br>ufngetdocumentstatustext: 3<br>ufngetaccountingstartdate: 5<br>ufnleadingzeros: 9<br>ufngetsalesorderstatustext: 3<br>ufngetproductstandardcost: 5<br></td></tr>
+<tr><td class="object_name">GLOBAL TEMPORARY TABLE</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td>Global temporary table are not supported by PostgreSQL and will not be exported. You will have to rewrite some application code to match the PostgreSQL temporary table behavior.</td><td class="detail"></td></tr>
+<tr><td class="object_name">INDEX</td><td style="text-align: center;">36</td><td style="text-align: center;">0</td><td style="text-align: center;">3.6</td><td>0 index(es) are concerned by the export, others are automatically generated and will do so on PostgreSQL. Bitmap will be exported as btree_gin index(es) and hash index(es) will be exported as b-tree index(es) if any. Domain index are exported as b-tree but commented to be edited to mainly use FTS. Cluster, bitmap join and IOT indexes will not be exported at all. Reverse indexes are not exported too, you may use a trigram-based index (see pg_trgm) or a reverse() function based index and search. Use 'varchar_pattern_ops', 'text_pattern_ops' or 'bpchar_pattern_ops' operators in your indexes to improve search with the LIKE operator respectively into varchar, text or char columns.</td><td class="detail"></td></tr>
+<tr><td class="object_name">JOB</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">2</td><td>Jobs are not exported. You may set external cron job with them.</td><td class="detail"></td></tr>
+<tr><td class="object_name">PROCEDURE</td><td style="text-align: center;">10</td><td style="text-align: center;">0</td><td style="text-align: center;">96</td><td>Total size of procedure code: 15593 bytes.</td><td class="detail">uspprinterror: 15<br>uspupdateemployeehireinfo: 5<br>uspgetwhereusedproductid: 8<br>usplogerror: 22<br>uspgetbillofmaterials: 8<br>uspupdateemployeepersonalinfo: 7<br>uspupdateemployeelogin: 5<br>uspgetemployeemanagers: 3<br>uspsearchcandidateresumes: 10<br>uspgetmanageremployees: 3<br></td></tr>
+<tr><td class="object_name">SYNONYM</td><td style="text-align: center;">2</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td>SYNONYMs will be exported as views. SYNONYMs do not exists with PostgreSQL but a common workaround is to use views or set the PostgreSQL search_path in your session to access object outside the current schema.</td><td class="detail">syn_schematest is an alias to .dbo.test<br>synonym_test is an alias to .dbo.test<br></td></tr>
+<tr><td class="object_name">TABLE</td><td style="text-align: center;">75</td><td style="text-align: center;">0</td><td style="text-align: center;">40.3</td><td> 88 check constraint(s).</td><td class="detail">7 binary columns<br>2 reserved words in column name<br>Total number of rows: 760837<br>Top 10 of tables sorted by number of rows:<br>sales.salesorderdetail has 121317 rows<br>production.transactionhistory has 113443 rows<br>production.transactionhistoryarchive has 89253 rows<br>production.workorder has 72591 rows<br>production.workorderrouting has 67131 rows<br>sales.salesorderheader has 31465 rows<br>sales.salesorderheadersalesreason has 27647 rows<br>person.businessentity has 20777 rows<br>person.emailaddress has 19972 rows<br>person.personphone has 19972 rows<br>Top 10 of largest tables:<br>person.person: 32.66 MB (19972 rows)<br>sales.salesorderdetail: 17.34 MB (121317 rows)<br>production.transactionhistory: 11.52 MB (113443 rows)<br>production.transactionhistoryarchive: 9.46 MB (89253 rows)<br>sales.salesorderheader: 8.60 MB (31465 rows)<br>production.workorderrouting: 7.83 MB (67131 rows)<br>production.workorder: 7.40 MB (72591 rows)<br>dbo.databaselog: 6.52 MB (1596 rows)<br>person.address: 5.98 MB (19614 rows)<br>person.emailaddress: 3.58 MB (19972 rows)<br></td></tr>
+<tr><td class="object_name">TABLE PARTITION</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td><td>Partitions are exported using table inheritance and check constraint. Hash and Key partitions are not supported by PostgreSQL and will not be exported.</td><td class="detail"> 1  partitions.<br></td></tr>
+<tr><td class="object_name">TRIGGER</td><td style="text-align: center;">12</td><td style="text-align: center;">0</td><td style="text-align: center;">107</td><td>Total size of trigger code: 17820 bytes.</td><td class="detail">recordinsertion: 7<br>demployee: 5<br>iuperson: 7<br>iworkorder: 7<br>uworkorder: 9<br>ipurchaseorderdetail: 11<br>upurchaseorderdetail: 12<br>upurchaseorderheader: 7<br>dvendor: 5<br>idusalesorderdetail: 15<br>usalesorderheader: 10<br></td></tr>
+<tr><td class="object_name">VIEW</td><td style="text-align: center;">20</td><td style="text-align: center;">0</td><td style="text-align: center;">134</td><td>Views are fully supported but can use specific functions.</td><td class="detail">humanresources.vemployee: 6<br>humanresources.vemployeedepartment: 4<br>humanresources.vemployeedepartmenthistory: 4<br>humanresources.vjobcandidate: 8<br>humanresources.vjobcandidateeducation: 11<br>humanresources.vjobcandidateemployment: 11<br>person.vadditionalcontactinfo: 12<br>person.vstateprovincecountryregion: 4<br>production.vproductanddescription: 4<br>production.vproductmodelcatalogdescription: 8<br>production.vproductmodelinstructions: 6<br>purchasing.vvendorwithaddresses: 4<br>purchasing.vvendorwithcontacts: 6<br>sales.vindividualcustomer: 6<br>sales.vpersondemographics: 9<br>sales.vsalesperson: 6<br>sales.vsalespersonsalesbyfiscalyears: 10<br>sales.vstorewithaddresses: 4<br>sales.vstorewithcontacts: 6<br>sales.vstorewithdemographics: 5<br></td></tr>
+<tr><th style="text-align: center; border-bottom: 0px; vertical-align: bottom;">Total</th><td style="text-align: center; border-bottom: 0px; vertical-align: bottom;">169</td><td style="text-align: center; border-bottom: 0px; vertical-align: bottom;">0</td><td style="text-align: center; border-bottom: 0px; vertical-align: bottom;">448.90</td><td colspan="2" style="border-bottom: 0px; vertical-align: bottom;">448.90 cost migration units means approximatively 6 man-day(s). The migration unit was set to 5 minute(s)
+</td></tr>
+</table>
+</div>
+<h2>Migration level: C-5</h2>
+
+<ul>
+<li>Migration levels:</li>
+  <ul>
+    <li>A - Migration that might be run automatically</li>
+    <li>B - Migration with code rewrite and a human-days cost up to 5 days</li>
+    <li>C - Migration with code rewrite and a human-days cost above 5 days</li>
+  </ul>
+<li>Technical levels:</li>
+  <ul>
+    <li>1 = trivial: no stored functions and no triggers</li>
+    <li>2 = easy: no stored functions but with triggers, no manual rewriting</li>
+    <li>3 = simple: stored functions and/or triggers, no manual rewriting</li>
+    <li>4 = manual: no stored functions but with triggers or views with code rewriting</li>
+    <li>5 = difficult: stored functions and/or triggers with code rewriting</li>
+  </ul>
+</ul>
+<h2>Details of cost assessment per function</h2>
+<ul>
+<li>Function usplogerror total estimated cost: 22</li>
+<ul>
+<li>SIZE => 2</li>
+<li>CURRENT_USER => 2</li>
+<li>ERROR_LINE => 2</li>
+<li>ERROR_PROCEDURE => 2</li>
+<li>XACT_STATE => 2</li>
+<li>IDENTITY => 2</li>
+<li>ERROR_STATE => 2</li>
+<li>TEST => 2</li>
+<li>ERROR_MESSAGE => 2</li>
+<li>LOG => 2</li>
+<li>CONVERT => 2</li>
+</ul>
+<li>Function uspprinterror total estimated cost: 15</li>
+<ul>
+<li>ERROR_LINE => 2</li>
+<li>ERROR_PROCEDURE => 2</li>
+<li>ERROR_STATE => 2</li>
+<li>ISNULL => 2</li>
+<li>TEST => 2</li>
+<li>ERROR_MESSAGE => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspsearchcandidateresumes total estimated cost: 10</li>
+<ul>
+<li>SIZE => 2</li>
+<li>TEST => 2</li>
+<li>CONVERT => 2</li>
+<li>SERVERPROPERTY => 2</li>
+<li>RANK => 2</li>
+</ul>
+<li>Function ufnleadingzeros total estimated cost: 9</li>
+<ul>
+<li>TEST => 2</li>
+<li>REPLICATE => 2</li>
+<li>DATALENGTH => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspgetwhereusedproductid total estimated cost: 8</li>
+<ul>
+<li>SIZE => 2</li>
+<li>SUM => 2</li>
+<li>ISNULL => 2</li>
+<li>TEST => 2</li>
+</ul>
+<li>Function uspgetbillofmaterials total estimated cost: 8</li>
+<ul>
+<li>SIZE => 2</li>
+<li>SUM => 2</li>
+<li>ISNULL => 2</li>
+<li>TEST => 2</li>
+</ul>
+<li>Function ufngetaccountingenddate total estimated cost: 7</li>
+<ul>
+<li>TEST => 2</li>
+<li>DATEADD => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspupdateemployeepersonalinfo total estimated cost: 7</li>
+<ul>
+<li>UPDATE => 2</li>
+<li>TEST => 2</li>
+<li>NCHAR => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetproductlistprice total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspupdateemployeehireinfo total estimated cost: 5</li>
+<ul>
+<li>UPDATE => 2</li>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetproductdealerprice total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetaccountingstartdate total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetproductstandardcost total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>CONVERT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetstock total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>SUM => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspupdateemployeelogin total estimated cost: 5</li>
+<ul>
+<li>UPDATE => 2</li>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetsalesorderstatustext total estimated cost: 3</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspgetemployeemanagers total estimated cost: 3</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetdocumentstatustext total estimated cost: 3</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function ufngetpurchaseorderstatustext total estimated cost: 3</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Function uspgetmanageremployees total estimated cost: 3</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+</ul>
+<h2>Details of cost assessment per trigger</h2>
+<ul>
+<li>Trigger idusalesorderdetail total estimated cost: 15</li>
+<ul>
+<li>SIZE => 3</li>
+<li>TEST => 2</li>
+<li>REPLACE => 2</li>
+<li>COUNT => 2</li>
+<li>GETDATE => 2</li>
+<li>UPDATE => 2</li>
+<li>SUM => 2</li>
+</ul>
+<li>Trigger upurchaseorderdetail total estimated cost: 12</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 2</li>
+<li>COUNT => 2</li>
+<li>GETDATE => 2</li>
+<li>UPDATE => 2</li>
+<li>SUM => 2</li>
+</ul>
+<li>Trigger ipurchaseorderdetail total estimated cost: 11</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>GETDATE => 2</li>
+<li>UPDATE => 2</li>
+<li>SUM => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger usalesorderheader total estimated cost: 10</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 2</li>
+<li>COUNT => 2</li>
+<li>UPDATE => 2</li>
+<li>SUM => 2</li>
+</ul>
+<li>Trigger uworkorder total estimated cost: 9</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>GETDATE => 2</li>
+<li>UPDATE => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger upurchaseorderheader total estimated cost: 7</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>UPDATE => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger iuperson total estimated cost: 7</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>UPDATE => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger recordinsertion total estimated cost: 7</li>
+<ul>
+<li>TEST => 2</li>
+<li>SUSER_SNAME => 2</li>
+<li>GETDATE => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger iworkorder total estimated cost: 7</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>GETDATE => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger demployee total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>Trigger dvendor total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>COUNT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+</ul>
+<h2>Details of cost assessment per view</h2>
+<ul>
+<li>View person.vadditionalcontactinfo total estimated cost: 12</li>
+<ul>
+<li>SIZE => 3</li>
+<li>TEST => 2</li>
+<li>MAX => 2</li>
+<li>LTRIM => 2</li>
+<li>RTRIM => 2</li>
+</ul>
+<li>View humanresources.vjobcandidateeducation total estimated cost: 11</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 2</li>
+<li>REPLACE => 2</li>
+<li>MAX => 2</li>
+<li>CONVERT => 2</li>
+</ul>
+<li>View humanresources.vjobcandidateemployment total estimated cost: 11</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 2</li>
+<li>REPLACE => 2</li>
+<li>MAX => 2</li>
+<li>CONVERT => 2</li>
+</ul>
+<li>View sales.vsalespersonsalesbyfiscalyears total estimated cost: 10</li>
+<ul>
+<li>TEST => 2</li>
+<li>YEAR => 2</li>
+<li>DATEADD => 2</li>
+<li>SUM => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View sales.vpersondemographics total estimated cost: 9</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 2</li>
+<li>REPLACE => 2</li>
+<li>CONVERT => 2</li>
+</ul>
+<li>View humanresources.vjobcandidate total estimated cost: 8</li>
+<ul>
+<li>SIZE => 3</li>
+<li>TEST => 2</li>
+<li>MAX => 2</li>
+</ul>
+<li>View production.vproductmodelcatalogdescription total estimated cost: 8</li>
+<ul>
+<li>SIZE => 3</li>
+<li>TEST => 2</li>
+<li>MAX => 2</li>
+</ul>
+<li>View sales.vsalesperson total estimated cost: 6</li>
+<ul>
+<li>TEST => 2</li>
+<li>LEFT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View production.vproductmodelinstructions total estimated cost: 6</li>
+<ul>
+<li>TEST => 2</li>
+<li>MAX => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View sales.vstorewithcontacts total estimated cost: 6</li>
+<ul>
+<li>TEST => 2</li>
+<li>LEFT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View humanresources.vemployee total estimated cost: 6</li>
+<ul>
+<li>TEST => 2</li>
+<li>LEFT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View purchasing.vvendorwithcontacts total estimated cost: 6</li>
+<ul>
+<li>TEST => 2</li>
+<li>LEFT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View sales.vindividualcustomer total estimated cost: 6</li>
+<ul>
+<li>TEST => 2</li>
+<li>LEFT => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View sales.vstorewithdemographics total estimated cost: 5</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 2</li>
+</ul>
+<li>View person.vstateprovincecountryregion total estimated cost: 4</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View purchasing.vvendorwithaddresses total estimated cost: 4</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View production.vproductanddescription total estimated cost: 4</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View humanresources.vemployeedepartment total estimated cost: 4</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View sales.vstorewithaddresses total estimated cost: 4</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+<li>View humanresources.vemployeedepartmenthistory total estimated cost: 4</li>
+<ul>
+<li>TEST => 2</li>
+<li>SIZE => 1</li>
+</ul>
+</ul>
+
+<div id="footer">
+Generated by <a href="http://ora2pg.darold.net/">Ora2Pg v19.0</a>
+</div>
+</body>
+</html>
