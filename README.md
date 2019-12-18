@@ -48,7 +48,8 @@ import_all.sh | |
 
 # Prerequisites
 
-This fork has many of the same prerequisites as ora2pg. Please head to http://ora2pg.darold.net/documentation.html#INSTALLATION for installation instructions. Once done, you will need to install a SQL Server client and/or server. 
+This fork has many of the same prerequisites as ora2pg. Please head to http://ora2pg.darold.net/documentation.html#INSTALLATION for installation instructions. 
+You then need to install the `DBD::ODBC` Perl module. Once done, you will need to install a SQL Server client and/or server. 
 
 ## Client install
 
